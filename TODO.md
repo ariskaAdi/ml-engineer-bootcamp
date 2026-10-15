@@ -20,12 +20,22 @@
 - [ ] 1–2 hours — review, Git commits, and documentation
 - [ ] 30–45 minutes — coding interview practice (Python/DSA, easy–medium), starting from Phase 3
 
+## Core resources (use throughout)
+
+- [StatQuest with Josh Starmer](https://www.youtube.com/@statquest) — statistics and classical ML explained visually.
+- [3Blue1Brown](https://www.3blue1brown.com/) — *Essence of Linear Algebra*, *Essence of Calculus*, and *Neural Networks* series.
+- [Andrej Karpathy — Neural Networks: Zero to Hero](https://karpathy.ai/zero-to-hero.html) — backpropagation and GPT built from scratch.
+- [An Introduction to Statistical Learning with Python (ISLP)](https://www.statlearning.com/) — free textbook for classical ML.
+- [DataTalksClub ML Zoomcamp](https://github.com/DataTalksClub/machine-learning-zoomcamp) and [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp) — free project-based courses with yearly live cohorts.
+
+> Items marked **(paid)** are optional; everything else is free. Links and cohort schedules can change — verify before relying on them.
+
 ---
 
 ## Week 0 — Setup and Tooling
 
-- [ ] Learn Git basics: init, add, commit, branch, merge, `.gitignore`, and writing clear commit messages.
-- [ ] Create a GitHub account/repository for this bootcamp and push your first commit.
+- [X] Learn Git basics: init, add, commit, branch, merge, `.gitignore`, and writing clear commit messages.
+- [X] Create a GitHub account/repository for this bootcamp and push your first commit.
 - [ ] Practice terminal basics: navigating directories, files, environment variables, and running scripts.
 - [ ] Set up Python with a virtual environment (`venv` or `uv`) and pin dependencies in `requirements.txt` or `pyproject.toml`.
 - [ ] Set up Jupyter (local or Google Colab) and VS Code.
@@ -38,6 +48,7 @@
 - [Pro Git Book](https://git-scm.com/book/en/v2)
 - [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
 - [Python venv Documentation](https://docs.python.org/3/library/venv.html)
+- [Corey Schafer (YouTube)](https://www.youtube.com/@coreyms) — Git and Python basics.
 
 ---
 
@@ -104,6 +115,17 @@
 - [Pandas Tutorials](https://pandas.pydata.org/docs/getting_started/intro_tutorials/)
 - [SQLBolt](https://sqlbolt.com/)
 - [Kaggle Learn — Intro to SQL](https://www.kaggle.com/learn/intro-to-sql)
+- [Select Star SQL](https://selectstarsql.com/) — interactive SQL book.
+- [Python for Data Analysis, 3rd ed. (Wes McKinney)](https://wesmckinney.com/book/) — free online book by the creator of Pandas.
+- [Think Stats (Allen Downey)](https://greenteapress.com/wp/think-stats-2e/) — statistics with Python.
+- [Mathematics for Machine Learning](https://mml-book.github.io/) — free book; use it as a reference, not cover to cover.
+- [Seeing Theory](https://seeing-theory.brown.edu/) — visual introduction to probability and statistics.
+
+**Videos**
+- [Corey Schafer](https://www.youtube.com/@coreyms) and [Keith Galli](https://www.youtube.com/@KeithGalli) — Pandas tutorials.
+- [freeCodeCamp](https://www.youtube.com/@freecodecamp) — full-length SQL courses.
+- [3Blue1Brown — Linear Algebra](https://www.3blue1brown.com/topics/linear-algebra) and [Calculus](https://www.3blue1brown.com/topics/calculus) — Weeks 4–5.
+- [StatQuest](https://www.youtube.com/@statquest) — statistics fundamentals for Week 4.
 
 ---
 
@@ -175,6 +197,14 @@
 - [scikit-learn User Guide](https://scikit-learn.org/stable/user_guide.html)
 - [Google ML Crash Course Exercises](https://developers.google.com/machine-learning/crash-course/exercises)
 - [Kaggle Learn](https://www.kaggle.com/learn)
+- [An Introduction to Statistical Learning with Python (ISLP)](https://www.statlearning.com/) — main textbook for this phase.
+- *Hands-On Machine Learning* by Aurélien Géron **(paid)** — the [companion notebooks](https://github.com/ageron/handson-ml3) are free.
+
+**Videos and courses**
+- [StatQuest](https://www.youtube.com/@statquest) — one video per algorithm or metric before implementing it.
+- [Andrew Ng — Machine Learning Specialization](https://www.coursera.org/specializations/machine-learning-introduction) — free to audit on Coursera.
+
+> Choose one main course style: Andrew Ng is theory-first; fast.ai (Phase 5) is code-first. Do not take both in full at the same time.
 
 ---
 
@@ -232,6 +262,8 @@
 
 **Free references**
 - [pytest Documentation](https://docs.pytest.org/)
+- [Interpretable Machine Learning (Christoph Molnar)](https://christophm.github.io/interpretable-ml-book/) — free book on permutation importance, SHAP, and their limits (Week 16).
+- [DataTalksClub ML Zoomcamp](https://github.com/DataTalksClub/machine-learning-zoomcamp) — end-to-end project examples for Portfolio Project 1.
 
 ---
 
@@ -302,6 +334,12 @@
 - [PyTorch Tutorials](https://docs.pytorch.org/tutorials/)
 - [PyTorch Learn the Basics](https://docs.pytorch.org/tutorials/beginner/basics/intro.html)
 - [Google Colab](https://colab.research.google.com/)
+- [Learn PyTorch for Deep Learning (Daniel Bourke)](https://www.learnpytorch.io/) — free online book; the matching full video course is on freeCodeCamp.
+- [Dive into Deep Learning](https://d2l.ai/) — free interactive book with runnable code.
+
+**Videos**
+- [3Blue1Brown — Neural Networks](https://www.3blue1brown.com/topics/neural-networks) — intuition for backpropagation (Week 21).
+- [Andrej Karpathy — Neural Networks: Zero to Hero](https://karpathy.ai/zero-to-hero.html) — start with micrograd for Weeks 21–22.
 
 ---
 
@@ -350,6 +388,8 @@
 - [TorchVision Documentation](https://docs.pytorch.org/vision/stable/index.html)
 - [PyTorch Transfer Learning Tutorial](https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html)
 - [OpenCV Tutorials](https://docs.opencv.org/4.x/d9/df8/tutorial_root.html)
+- [Stanford CS231n](https://cs231n.stanford.edu/) — CNN course notes; lectures are on YouTube.
+- [fast.ai — Practical Deep Learning for Coders](https://course.fast.ai/) — code-first course, strong on transfer learning.
 
 **Optional after this track:** explore YOLO and object detection if computer vision becomes your specialization. They are not prerequisites for every ML Engineer role.
 
@@ -394,6 +434,9 @@
 **Free references (Track B)**
 - [Hugging Face LLM Course](https://huggingface.co/learn/llm-course)
 - [Hugging Face Transformers Documentation](https://huggingface.co/docs/transformers/index)
+- [Andrej Karpathy — Zero to Hero](https://karpathy.ai/zero-to-hero.html) — the "Let's build GPT" video for Week 28.
+- [Stanford CS224N](https://web.stanford.edu/class/cs224n/) — NLP with deep learning; lectures are on YouTube.
+- [Speech and Language Processing (Jurafsky & Martin)](https://web.stanford.edu/~jurafsky/slp3/) — free draft textbook; use as a reference.
 
 ### Week 31: Buffer and Review
 - [ ] Revisit any unmet exit criteria from your chosen track.
@@ -479,6 +522,14 @@
 - [GitHub Actions Documentation](https://docs.github.com/en/actions)
 - [Hugging Face Spaces](https://huggingface.co/docs/hub/spaces)
 - [MLflow Tracking](https://mlflow.org/docs/latest/ml/tracking)
+- [A Tour of Go](https://go.dev/tour/) and [Go by Example](https://gobyexample.com/) — Go refresher before Week 33.
+- [DataTalksClub MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp) — experiment tracking, deployment, and monitoring.
+- [Made With ML](https://madewithml.com/) — production ML and MLOps practices.
+- [Google — Rules of Machine Learning](https://developers.google.com/machine-learning/guides/rules-of-ml) — practical ML engineering guidelines.
+- *Designing Machine Learning Systems* by Chip Huyen **(paid)** — strongly recommended if you buy one book.
+
+**Videos**
+- [TechWorld with Nana](https://www.youtube.com/@TechWorldwithNana) — Docker, Docker Compose, and CI/CD basics.
 
 > Go is a reasonable choice for the surrounding REST API. Python remains the most practical default for model training and the initial inference ecosystem. You do not need to rewrite ML libraries in Go.
 
@@ -520,6 +571,11 @@
 - [ ] The Go API and Python model service have clear responsibilities.
 - [ ] You can explain trade-offs and failure cases without relying on AI-generated explanations.
 
+**Free references**
+- [Introduction to Machine Learning Interviews (Chip Huyen)](https://huyenchip.com/ml-interviews-book/) — free book on the ML interview process and questions.
+- [NeetCode](https://neetcode.io/) — structured DSA practice with video explanations.
+- [StatQuest](https://www.youtube.com/@statquest) — quick concept review before interviews.
+
 ---
 
 ## Final readiness checklist
@@ -541,7 +597,7 @@
 
 ## Learning rules
 
-1. Prefer official documentation for APIs and use YouTube for visual explanations.
+1. Prefer official documentation for APIs and use YouTube for visual explanations. For each topic, pick one video and one reading, then practice immediately.
 2. Do not learn every library in the same phase; learn a tool when a project requires it.
 3. Use AI for explanations, debugging, and review—not as a substitute for implementing and evaluating the model.
 4. Keep a record of experiments and explain every metric you report.
