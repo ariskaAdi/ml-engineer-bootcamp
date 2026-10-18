@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+data/
+*.csv
+*.pt
+*.pth
+*.pkl
+*.joblib
+mlruns/
+.env

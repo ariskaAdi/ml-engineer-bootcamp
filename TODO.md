@@ -8,6 +8,8 @@
 **Budget:** Free learning resources; use free cloud notebooks where possible  
 **API/backend preference:** Go for REST APIs; Python for data science, training, and inference experiments
 
+> **New here? Read [GETTING_STARTED.md](GETTING_STARTED.md) first.** It covers the Python self-check, computer setup, how to study each week session by session, note templates, what to do when stuck, and where to find datasets.
+
 > Progress rule: check off a task only after you can explain the concept and reproduce the result without blindly copying a tutorial. If a phase's exit criteria are not met, use the buffer week to repeat or extend it before moving on.
 
 > Buffer rule: each phase ends with a buffer week. If all exit criteria are already met, skip it (or use it for interview practice) and move on.
@@ -49,6 +51,44 @@
 - [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/)
 - [Python venv Documentation](https://docs.python.org/3/library/venv.html)
 - [Corey Schafer (YouTube)](https://www.youtube.com/@coreyms) — Git and Python basics.
+
+---
+
+## Python Fundamentals (optional, 2–4 weeks, before Week 1)
+
+> Do this block only if you did not pass the Python self-check in [GETTING_STARTED.md](GETTING_STARTED.md#step-1--check-your-starting-point). These weeks are not counted in the 43-week duration.
+
+### Part 1: Core syntax
+- [ ] Variables, data types, operators, and string formatting (f-strings).
+- [ ] `if/elif/else`, `for` and `while` loops, `break` and `continue`.
+- [ ] Lists, tuples, dictionaries, and sets, with their common methods.
+- [ ] Mini-task: a command-line to-do list or expense tracker.
+
+### Part 2: Functions and files
+- [ ] Functions, parameters, return values, default arguments, and scope.
+- [ ] List and dictionary comprehensions.
+- [ ] Read and write text and CSV files (`open`, `csv` module).
+- [ ] Error handling with `try/except`.
+- [ ] Mini-task: read a CSV of transactions and print a summary without Pandas.
+
+### Part 3: Modules and classes
+- [ ] Import standard library modules and split code into your own `.py` files.
+- [ ] Classes, `__init__`, methods, and attributes.
+- [ ] Install and use a third-party package with `uv add`.
+- [ ] Mini-task: rewrite the Part 2 mini-task using a class and a separate module.
+
+### Part 4: Practice (if needed)
+- [ ] Solve 15–20 easy problems (for example, on NeetCode or Exercism).
+- [ ] Retake the self-check in [GETTING_STARTED.md](GETTING_STARTED.md).
+
+**Exit criteria**
+- [ ] Pass every item of the Python self-check without searching.
+
+**Free references**
+- [The Python Tutorial (official)](https://docs.python.org/3/tutorial/)
+- [CS50's Introduction to Programming with Python (CS50P)](https://cs50.harvard.edu/python/) — free course with video lectures and problem sets.
+- [Corey Schafer — Python Tutorials](https://www.youtube.com/@coreyms)
+- [Exercism — Python Track](https://exercism.org/tracks/python) — free practice exercises with mentoring.
 
 ---
 
