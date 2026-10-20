@@ -1,7 +1,7 @@
 [project]
 name = "ml-bootcamp"
 version = "0.1.0"
-description = "Add your description here"
+description = "43-week self-study roadmap to become a Junior ML Engineer"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
