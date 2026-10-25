@@ -1,0 +1,30 @@
+# Render Blueprint (https://render.com/docs/blueprint-spec) — 2 web service gratis.
+# Cara pakai: salin file ini ke ROOT repo sebagai render.yaml, push ke GitHub,
+# lalu di Render: New -> Blueprint -> pilih repo. Model package harus ikut di-commit
+# (services/inference-py/model/, lihat .gitignore).
+services:
+  - type: web
+    name: bank-inference
+    runtime: docker
+    plan: free
+    rootDir: services/inference-py
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /ready
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:////tmp/predictions.db   # free tier: disk tidak permanen, log hilang saat restart
+      - key: PORT
+        value: "8000"
+
+  - type: web
+    name: bank-api
+    runtime: docker
+    plan: free
+    rootDir: services/api-go
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: INFERENCE_URL
+        sync: false            # isi manual: URL publik bank-inference, mis. https://bank-inference-xxxx.onrender.com
+      - key: INFERENCE_TIMEOUT
+        value: 60s             # cold start service gratis bisa 30-60 detik

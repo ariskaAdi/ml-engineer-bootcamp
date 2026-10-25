@@ -1,0 +1,6 @@
+tests/
+scripts/
+__pycache__/
+*.db
+.pytest_cache/
+conftest.py

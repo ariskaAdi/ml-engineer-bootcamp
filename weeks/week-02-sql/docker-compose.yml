@@ -1,0 +1,23 @@
+# PostgreSQL lokal untuk latihan (opsional).
+#   Nyalakan : docker compose -f weeks/week-02-sql/docker-compose.yml up -d
+#   Matikan  : docker compose -f weeks/week-02-sql/docker-compose.yml down      (data tetap ada)
+#   Hapus    : ... down -v                                                     (data ikut terhapus)
+# Password ini HANYA untuk latihan lokal. Jangan dipakai di server sungguhan.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: bootcamp
+      POSTGRES_PASSWORD: bootcamp
+      POSTGRES_DB: sales
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bootcamp -d sales"]
+      interval: 5s
+      retries: 10
+
+volumes:
+  pgdata:

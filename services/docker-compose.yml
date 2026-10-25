@@ -1,0 +1,43 @@
+# Menjalankan 3 container: PostgreSQL (log prediksi), Python inference, Go API.
+#   cp services/.env.example services/.env
+#   uv run python services/inference-py/scripts/export_model.py
+#   docker compose -f services/docker-compose.yml --env-file services/.env up --build
+# Hanya Go API yang dibuka ke luar (port 8080). Python dan Postgres hanya bisa diakses di jaringan internal.
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "127.0.0.1:5433:5432"   # hanya untuk monitoring dari laptop (127.0.0.1 = tidak terbuka ke jaringan)
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}"]
+      interval: 5s
+      retries: 10
+
+  inference:
+    build: ./inference-py
+    environment:
+      DATABASE_URL: postgresql+psycopg://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
+      LOG_LEVEL: ${LOG_LEVEL:-INFO}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  api:
+    build: ./api-go
+    environment:
+      INFERENCE_URL: http://inference:8000     # nama service = hostname di jaringan Docker
+      INFERENCE_TIMEOUT: ${INFERENCE_TIMEOUT:-2s}
+    ports:
+      - "8080:8080"
+    depends_on:
+      inference:
+        condition: service_healthy
+
+volumes:
+  pgdata:

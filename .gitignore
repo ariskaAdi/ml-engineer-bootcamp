@@ -9,3 +9,21 @@ data/
 *.joblib
 mlruns/
 .env
+models/
+outputs/
+*.db
+*.sqlite
+mlflow.db
+mlartifacts/
+.pytest_cache/
+*.egg-info/
+bin/
+artifacts/
+samples/
+# Model package kecil untuk deploy demo boleh di-commit (lihat week-36 NOTES)
+!services/inference-py/model/
+!services/inference-py/model/**
+predictions.db
+services/inference-py/model/**/__pycache__/
+!capstone/services/inference/model/
+!capstone/services/inference/model/**

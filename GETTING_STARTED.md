@@ -486,7 +486,7 @@ Isi `NOTES.md` dengan kerangka dari [Bagian 8](#bagian-8--template).
 - Apa beda `.loc` dengan `.iloc`?
 
 Belum bisa menjawab semuanya juga tidak apa-apa. Pertanyaan ini akan terjawab di Sesi 2.
-
+s
 ---
 
 ### Sesi 2a — NumPy (±1 jam), file `01-numpy-basics.ipynb`

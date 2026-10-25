@@ -1,0 +1,66 @@
+# CI: jalankan semua tes Go dan Python setiap push / pull request.
+# Setiap job memasang dependency minimal sendiri, supaya cepat dan tidak saling bergantung.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  go-api:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: services/api-go
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: services/api-go/go.mod
+      - name: gofmt
+        run: test -z "$(gofmt -l .)" || (gofmt -l . && exit 1)
+      - run: go vet ./...
+      - run: go test -race -count=1 ./...
+
+  inference-service:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: services/inference-py/requirements*.txt
+      - run: pip install -r services/inference-py/requirements-dev.txt
+      - run: pytest services/inference-py -q
+
+  ml-projects:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install (torch CPU-only supaya ringan)
+        run: |
+          pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          pip install scikit-learn pandas joblib pillow pytest
+      # Tes yang butuh model terlatih otomatis di-skip (artefak tidak di-commit).
+      - run: pytest projects/p1-bank-marketing projects/p2-fashion-cnn projects/p3-news-topics -q
+
+  capstone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r capstone/services/inference/requirements-dev.txt
+      - run: pytest capstone -q
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: capstone/services/gateway-go/go.mod
+      - working-directory: capstone/services/gateway-go
+        run: go vet ./... && go test -race -count=1 ./...

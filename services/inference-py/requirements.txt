@@ -1,0 +1,12 @@
+# Versi HARUS sama dengan saat model dilatih (lihat uv.lock / metadata.json),
+# karena model disimpan dengan pickle dan bisa rusak di versi scikit-learn lain.
+fastapi==0.162.0
+uvicorn==0.54.0
+pydantic==2.14.1
+scikit-learn==1.9.1
+pandas==3.0.6
+numpy==2.5.4
+scipy==1.18.1
+joblib==1.6.0
+sqlalchemy==2.1.6
+psycopg[binary]==3.3.6
