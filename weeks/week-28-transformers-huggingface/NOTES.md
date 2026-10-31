@@ -52,6 +52,13 @@ Jawabannya bergantung pada konteks:
 - **Tidak sepadan** kalau volume sangat besar dengan anggaran CPU kecil, latensi < 5 ms wajib, atau 82% sudah memenuhi kebutuhan bisnis. Di capstone (spam SMS), TF-IDF sudah PR-AUC 0,99, jadi transformer tidak dipakai.
 - Jalan tengah: distilasi/kuantisasi model, atau kaskade (TF-IDF untuk kasus mudah, transformer hanya untuk kasus yang ragu).
 
+## Analogi untuk orang awam
+- **Attention** → saat membaca "not good", kata "good" "menoleh" ke "not" dan sadar artinya terbalik. Setiap kata memutuskan kata lain mana yang perlu diperhatikan.
+- **Query, key, value** → di perpustakaan: query = pertanyaanmu, key = label di punggung buku, value = isi buku. Kecocokan query dengan key menentukan buku mana yang paling banyak kamu baca.
+- **Subword tokenizer** → kata asing "unwatchable" dipecah menjadi potongan yang dikenal: "un" + "watch" + "able", seperti membaca kata baru dari suku katanya.
+- **Pretraining + fine-tuning** → lulusan sastra yang sudah membaca jutaan buku (pretraining), lalu cukup diberi pelatihan singkat untuk menilai ulasan film (fine-tuning).
+- **Biaya vs manfaat** → taksi premium vs ojek: lebih nyaman dan tepat, tapi jauh lebih mahal per perjalanan. Tidak selalu sepadan.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan attention dalam 3 kalimat tanpa rumus.
 - [ ] Dengan tabel di atas, argumentasikan pilihan model untuk 2 skenario berbeda.

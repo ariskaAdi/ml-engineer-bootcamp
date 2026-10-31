@@ -51,6 +51,13 @@ Probabilitas 0,1213 **sama persis** dengan `predict.py` P1 → service memakai p
 - Error internal → pesan umum "inference failed"; detailnya hanya di log server (jangan membocorkan stack trace ke klien).
 - Setiap prediksi dicatat ke database (`app/db.py`) untuk monitoring (Week 36). Kegagalan mencatat log **tidak** menggagalkan prediksi.
 
+## Analogi untuk orang awam
+- **Training vs inference** → dapur pusat yang memasak dan mengemas (training), dan restoran cabang yang hanya memanaskan dan menyajikan (inference). Cabang tidak perlu dapur besar.
+- **Model package** → kotak makanan beku lengkap dengan instruksi memasaknya. Tanpa instruksi (folder `code/`), isi kotak tidak bisa dipakai.
+- **API dan schema** → menu restoran dengan aturan pemesanan jelas. Pesanan yang tidak sesuai menu ditolak di kasir (422) sebelum sampai ke dapur.
+- **Liveness vs readiness** → restoran buka (lampu menyala) vs dapur siap menerima pesanan (bahan sudah ada).
+- **Memuat model sekali saat startup** → menyalakan oven sekali di pagi hari, bukan setiap ada pesanan.
+
 ## Exit criteria — tes diri
 - [ ] Kirim request langsung ke service Python dan dapat prediksi valid.
 - [ ] Jelaskan kenapa folder `code/` ikut di model package dan kenapa versi scikit-learn dikunci.

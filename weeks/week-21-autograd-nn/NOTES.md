@@ -44,6 +44,14 @@ Loss adalah fungsi dari parameter (data tetap). Gradien memberi tahu bagaimana l
 
 Model linear hanya bisa membuat batas lurus. MLP dengan hidden layer + ReLU bisa membuat batas melengkung (`week21_3_boundary.png`). SGD polos paling lambat turun; momentum dan Adam jauh lebih cepat (`week21_2_optimizers.png`).
 
+## Analogi untuk orang awam
+- **Neural network** → rangkaian penyaring kopi bertingkat: setiap lapisan mengubah dan menyaring informasi sebelum diteruskan.
+- **Fungsi aktivasi** → keran yang hanya mengalirkan air kalau tekanannya cukup. Tanpa keran ini, setumpuk lapisan sama saja dengan satu lapisan.
+- **Loss** → skor "seberapa jauh tembakanmu dari target".
+- **Autograd / backpropagation** → setelah tembakan meleset, pelatih menelusuri mundur: "bahumu terlalu tinggi 2 cm, siku terlalu ke kiri 1 cm". Setiap bagian tahu harus dikoreksi seberapa banyak.
+- **Optimizer** → gaya belajar: SGD seperti melangkah sesuai kemiringan saat ini; momentum seperti bola menggelinding yang tidak mudah berhenti di lubang kecil; Adam menyesuaikan panjang langkah untuk setiap otot secara terpisah.
+- **`zero_grad()`** → menghapus papan tulis sebelum menulis koreksi baru; kalau lupa, koreksi lama ikut terhitung.
+
 ## Exit criteria — tes diri
 - [ ] Tanpa melihat, tulis 5 baris inti loop training dan jelaskan setiap baris.
 - [ ] Jelaskan kenapa `zero_grad()` perlu dan apa yang terjadi kalau lupa.

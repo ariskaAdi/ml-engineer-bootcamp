@@ -54,6 +54,13 @@ Dua kolom acak (`random_id` dengan ±10.000 nilai unik, `random_coin` 0/1) ditam
 - Fitur yang saling berkorelasi (land_area, building_area, bedrooms) berbagi importance. Mengacak satu tidak terlalu merusak karena yang lain menggantikan, sehingga importance masing-masing terlihat lebih kecil.
 - Importance = "seberapa banyak **model** memakai fitur ini", **bukan** "seberapa besar fitur ini **menyebabkan** target" (Week 16).
 
+## Analogi untuk orang awam
+- **Decision tree** → diagram alur "ya/tidak" di poster: mudah dibaca, tapi pohon yang terlalu dalam menghafal setiap kasus khusus.
+- **Random forest** → bertanya pada 300 orang yang masing-masing hanya membaca sebagian informasi, lalu mengambil suara terbanyak. Kesalahan pribadi saling meniadakan.
+- **Gradient boosting** → tim yang bekerja berurutan: orang kedua memperbaiki kesalahan orang pertama, orang ketiga memperbaiki sisa kesalahan, dan seterusnya.
+- **Model sederhana bisa menang** → untuk mengukur meja, penggaris lebih tepat daripada mesin laser yang rumit. Pilih alat sesuai bentuk masalahnya.
+- **Impurity importance yang bias** → menilai karyawan dari "seberapa sering namanya disebut di rapat": orang yang namanya unik dan sering dipanggil tampak penting, padahal kontribusinya kecil. Permutation importance menguji langsung: apa yang rusak kalau orang ini tidak ada?
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan kenapa Ridge dipilih walaupun Gradient Boosting "lebih canggih".
 - [ ] Jelaskan beda bagging (RF) dan boosting dalam 2 kalimat.

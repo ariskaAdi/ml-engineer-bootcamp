@@ -66,6 +66,13 @@ Mengirim 300 nasabah dari periode **awal** data (mirip training) lalu 300 dari p
 3. Sebelum mengganti model: bandingkan model baru vs lama pada data terbaru (validasi berbasis waktu), lalu deploy bertahap dan siapkan rollback (Week 37).
 Drift tidak selalu berarti retraining. Kadang yang perlu diubah cukup threshold-nya (misalnya kembali ke "top 20%" berdasarkan skor hari ini), atau masalahnya ada di pipeline data (bug, kolom tertukar).
 
+## Analogi untuk orang awam
+- **Deploy free tier** → membuka lapak di pasar malam gratis: bisa dikunjungi siapa saja, tapi lapaknya "tidur" kalau sepi, sehingga pengunjung pertama harus menunggu lampu dinyalakan (cold start).
+- **Monitoring** → dasbor mobil: kecepatan (latensi), lampu peringatan (error rate), dan bensin (distribusi prediksi). Kamu tidak menunggu mobil mogok untuk tahu ada masalah.
+- **Data drift** → toko payung yang dipindah dari kota hujan ke kota kemarau: pembelinya berubah, walaupun payungnya sama.
+- **Concept drift** → selera pelanggan berubah: dengan cuaca yang sama, orang kini lebih suka jas hujan daripada payung.
+- **PSI** → membandingkan "foto kerumunan pembeli" hari ini dengan foto saat toko dibuka. Kalau komposisinya sangat berbeda, alarm berbunyi.
+
 ## Exit criteria — tes diri
 - [ ] Endpoint publik mengembalikan prediksi (setelah deploy dengan akunmu).
 - [ ] Jelaskan 3 sinyal yang menunjukkan model memburuk, mana yang butuh label dan mana yang tidak.

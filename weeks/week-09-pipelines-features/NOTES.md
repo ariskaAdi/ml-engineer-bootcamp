@@ -60,6 +60,14 @@ Pelajaran: **tidak semua fitur baru membantu.** Uji satu per satu (*ablation*), 
 - Lupa `handle_unknown="ignore"` → error saat ada kategori baru.
 - Fitur yang memakai target (misalnya rata-rata harga per kota) **harus** dihitung di dalam fold/pipeline.
 
+## Analogi untuk orang awam
+- **Pipeline** → resep standar di dapur restoran: urutan langkah (cuci → potong → bumbui → masak) selalu sama, siapa pun kokinya, sehingga rasanya konsisten setiap hari.
+- **Imputer** → mengisi kursi kosong di foto kelas dengan perkiraan yang wajar, daripada membuang seluruh baris foto.
+- **One-hot encoding** → mengubah "kota" menjadi deretan saklar lampu: lampu Jakarta menyala, lampu kota lain mati.
+- **Leakage (fit di seluruh data)** → guru yang membuat kisi-kisi dengan melihat soal ujian akhir. Nilai try-out jadi bagus, tapi kemampuan sebenarnya tidak meningkat.
+- **Feature engineering** → menghitung "harga per m²" sebelum membandingkan rumah: informasi yang sudah ada, tapi disajikan dengan cara yang lebih mudah dipahami model.
+- **Ablation** → mencicipi masakan sambil menambah bumbu satu per satu, supaya tahu bumbu mana yang benar-benar membuat enak.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan kenapa `scaler.fit(X_semua)` sebelum split adalah leakage, dan bagaimana pipeline mencegahnya.
 - [ ] Bangun ulang pipeline dari nol: imputer + scaler untuk angka, imputer + one-hot untuk kategori, lalu LinearRegression.

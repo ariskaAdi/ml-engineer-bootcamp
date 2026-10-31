@@ -62,6 +62,14 @@ CI 95% = interval yang dibuat dengan metode yang, kalau diulang pada banyak samp
 
 Pelajaran A/B test: tentukan ukuran sampel **sebelum** eksperimen, jangan mengintip lalu berhenti saat p < 0,05, dan laporkan besar efek + CI, bukan hanya p-value.
 
+## Analogi untuk orang awam
+- **Sampel** → mencicipi satu sendok sup untuk menilai satu panci. Asal diaduk rata (acak), satu sendok sudah cukup mewakili.
+- **Sampling bias** → mencicipi hanya bagian atas sup yang belum diaduk. Sebanyak apa pun sendoknya, kesimpulanmu tetap salah.
+- **Standard error / CLT** → satu orang menebak berat sapi bisa meleset jauh, tapi rata-rata tebakan 100 orang biasanya sangat dekat. Makin banyak orang, makin stabil rata-ratanya.
+- **Bayes / base rate** → alarm rumah yang sangat sensitif di kompleks yang hampir tidak pernah ada maling: sebagian besar bunyinya adalah alarm palsu (kucing lewat), walaupun alatnya "95% akurat".
+- **p-value** → "Kalau koin ini jujur, seberapa aneh hasil 9 kepala dari 10 lemparan?" Ia tidak memberi tahu peluang koinnya curang.
+- **Power** → mencari jarum dengan senter redup: jarumnya ada, tapi sinarmu terlalu lemah (sampel terlalu kecil) untuk melihatnya.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan kenapa dua sampel dari populasi yang sama memberi mean berbeda, dan apa yang terjadi kalau n diperbesar.
 - [ ] Jelaskan kenapa mean saja tidak cukup (contoh toko C).

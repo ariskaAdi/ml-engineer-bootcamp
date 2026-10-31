@@ -47,6 +47,14 @@ Image yang **sama** bisa dipakai di laptop, staging, dan produksi; hanya env var
 ## Reproducibility
 Docker mengunci OS + versi Python + library. Ditambah: model package dengan hash data dan versi model, `requirements.txt` dengan versi persis. Siapa pun dengan Docker bisa menjalankan sistem yang identik.
 
+## Analogi untuk orang awam
+- **Container** → kontainer kapal: isinya dikemas lengkap dan standar, sehingga bisa dipindah dari kapal ke truk ke gudang tanpa dibongkar ulang. "Di laptopku jalan kok" tidak lagi menjadi masalah.
+- **Image vs container** → image = cetakan kue; container = kue yang sedang dibuat dari cetakan itu. Satu cetakan bisa membuat banyak kue.
+- **Layer cache** → menyimpan adonan dasar yang sudah jadi, sehingga kalau hanya hiasannya yang berubah, kamu tidak mengulang dari tepung.
+- **Multi-stage build** → membangun mebel di bengkel besar, lalu hanya mengirim mebelnya ke rumah, bukan seluruh bengkel (image Go 16 MB).
+- **Docker Compose** → konduktor orkestra yang memastikan pemain masuk sesuai urutan (database dulu, lalu model, lalu API).
+- **Secret di `.env`** → kunci rumah disimpan di saku, bukan ditempel di pintu yang difoto dan disebar.
+
 ## Exit criteria — tes diri
 - [ ] Jalankan dengan perintah di atas dan verifikasi request end-to-end.
 - [ ] Jelaskan kenapa image Go 16 MB tapi image Python 726 MB.

@@ -48,6 +48,13 @@ klien ──HTTP/JSON──▶ Go API :8080 ──HTTP/JSON internal──▶ Py
 - `http.Server` dengan `ReadHeaderTimeout`/`ReadTimeout`/`WriteTimeout` + graceful shutdown (SIGTERM dari Docker → selesaikan request yang sedang berjalan).
 - Tanpa message broker: HTTP sinkron cukup untuk satu prediksi per request. Broker (Kafka/RabbitMQ) baru masuk akal untuk batch besar atau pemrosesan asinkron.
 
+## Analogi untuk orang awam
+- **Go API + Python model** → resepsionis hotel (Go) dan koki (Python). Resepsionis menerima tamu, memeriksa reservasi, dan menerapkan aturan hotel; koki hanya memasak.
+- **Aturan bisnis di Go** → aturan "tamu yang sudah 10 kali komplain tidak ditawari promo lagi" diputuskan resepsionis tanpa perlu bertanya ke koki.
+- **Timeout** → resepsionis tidak menunggu dapur selamanya; setelah 2 detik ia memberi tahu tamu bahwa dapur sedang sibuk.
+- **Request ID** → nomor antrean yang sama di meja resepsionis dan di dapur, sehingga satu pesanan bisa dilacak dari awal sampai akhir.
+- **Interface `Scorer`** → stopkontak standar: alat apa pun (koki Python sungguhan atau koki palsu untuk tes) bisa dicolokkan selama bentuk stekernya sama.
+
 ## Exit criteria — tes diri
 - [ ] Kirim request ke endpoint Go dan dapat prediksi dari model Python.
 - [ ] Jelaskan kenapa aturan *contact fatigue* ada di Go, bukan di model.

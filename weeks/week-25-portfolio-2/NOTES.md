@@ -25,6 +25,12 @@ MLP meratakan gambar menjadi 784 angka. Informasi "piksel ini bertetangga dengan
 - `predict.py`: hanya inference; memuat `model.pt` (bobot + config) dan membangun ulang arsitektur dari config.
 Pemisahan ini menyiapkan Phase 6: service inference cukup mengimpor `model.py` + `predict.py`, tanpa kode training.
 
+## Analogi untuk orang awam
+- **CNN vs MLP** → MLP seperti membaca foto yang sudah dirobek menjadi 784 potongan acak; CNN melihat foto utuh dengan kaca pembesar kecil yang digeser ke seluruh bagian.
+- **Augmentasi (flip)** → melatih kenalan mengenali wajahmu dari foto biasa dan foto cermin. Data "baru" tanpa memotret ulang.
+- **BatchNorm** → menyamakan volume semua mikrofon sebelum rekaman, supaya tidak ada yang terlalu keras atau terlalu pelan.
+- **Pemisahan train.py / predict.py** → dapur produksi dan meja kasir: pelanggan hanya butuh kasir, bukan seluruh dapur.
+
 ## Exit criteria — tes diri
 - [ ] Jalankan ulang training dari README (atau versi cepat `--epochs 1 --train-size 5000`) dan inference pada gambar sampel.
 - [ ] Jelaskan setiap baris loop `run_epoch` di `train.py`, termasuk kenapa `torch.set_grad_enabled(training)`.

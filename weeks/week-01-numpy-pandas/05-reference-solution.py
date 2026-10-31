@@ -54,6 +54,7 @@ except ValueError as e:
 # ## Bagian B — Mini-task sales (ringkas)
 
 # %%
+import pandas as pd
 from mlbootcamp.paths import DATA_DIR
 
 df = pd.read_csv(DATA_DIR / "sales_raw.csv")

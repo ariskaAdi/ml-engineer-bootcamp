@@ -79,6 +79,14 @@ Ide perbaikan yang bisa diuji: resolusi input lebih besar, augmentasi lebih kuat
 ## Opsional setelah track ini
 Object detection (YOLO), segmentasi. Tidak wajib untuk semua posisi ML engineer.
 
+## Analogi untuk orang awam
+- **Gambar sebagai angka** → mozaik ubin: setiap ubin (piksel) punya angka kecerahan; foto warna = tiga lapis mozaik (merah, hijau, biru).
+- **Konvolusi** → kaca pembesar dengan pola tertentu yang digeser ke seluruh foto, mencari "tepi vertikal" atau "sudut".
+- **Pooling** → membuat ringkasan setiap kotak 2×2 dengan mengambil nilai paling menonjol; seperti membaca judul tiap paragraf.
+- **Transfer learning** → menyewa fotografer berpengalaman lalu mengajarinya hanya jenis produk tokomu. Jauh lebih cepat daripada melatih orang yang belum pernah memegang kamera.
+- **Beku vs fine-tune** → beku = memakai fotografer apa adanya, hanya memberi label; fine-tune = juga sedikit menyesuaikan gaya fotonya.
+- **Bug BGR/RGB** → memberikan peta dengan warna merah dan biru tertukar: navigator tetap jalan tanpa protes, tapi sering salah belok.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan langkah dari file JPG sampai tensor `(1, 3, 96, 96)` yang siap masuk model.
 - [ ] Jelaskan beda model beku dan fine-tune, dan kapan memilih masing-masing.

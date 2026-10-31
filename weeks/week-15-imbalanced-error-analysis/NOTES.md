@@ -55,6 +55,13 @@ Alur yang dipakai (ulangi untuk setiap kelemahan): **lihat error → temukan pol
 
 Alternatif lain untuk menguji: encoding siklis `sin/cos(2π·hour/24)`, atau model pohon (HGB bisa memotong `hour ≤ 4 atau ≥ 23` sendiri, sehingga PR-AUC-nya sudah lebih tinggi).
 
+## Analogi untuk orang awam
+- **Data tidak seimbang** → mencari 2 jarum di antara 98 jerami. Bilang "semuanya jerami" sudah benar 98%, tapi tidak berguna.
+- **Class weight / oversampling** → memberi tahu pelatih "setiap jarum yang terlewat dihitung 50 kali lebih parah". Model jadi lebih "berani" menebak jarum.
+- **Threshold** → mengatur kepekaan detektor logam. Sering kali cukup memutar kenop ini tanpa membeli detektor baru.
+- **Resampling sebelum split** → memfotokopi soal ujian lalu menyelipkan salinannya ke buku latihan: nilai ujian sempurna, tapi palsu.
+- **Analisis error** → montir yang membuka mesin yang rusak dan menemukan pola ("selalu rusak saat malam dingin"), lalu menguji satu perbaikan pada satu waktu.
+
 ## Exit criteria — tes diri
 - [ ] Sebutkan 2 kelompok kegagalan model dan usulkan perbaikan yang bisa diuji untuk masing-masing.
 - [ ] Jelaskan kenapa `class_weight` tidak mengubah PR-AUC tapi mengubah jumlah TP/FP di threshold 0,5.

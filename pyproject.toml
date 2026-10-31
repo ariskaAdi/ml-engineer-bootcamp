@@ -34,7 +34,10 @@ dependencies = [
 ]
 
 [dependency-groups]
-dev = ["pytest>=8.4"]
+dev = [
+    "jupytext>=1.19.6",
+    "pytest>=8.4",
+]
 
 [build-system]
 requires = ["hatchling"]

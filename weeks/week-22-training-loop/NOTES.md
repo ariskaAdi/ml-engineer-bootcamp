@@ -47,6 +47,13 @@ model = MLP(); model.load_state_dict(torch.load(path)["model_state"])
 ## Kenapa 1 epoch ±35 detik di CPU?
 Sebagian besar waktunya bukan untuk menghitung model, tapi untuk `__getitem__` → konversi PIL → tensor satu per satu di Python. Ini **bottleneck data loading** (Week 24).
 
+## Analogi untuk orang awam
+- **Dataset** → lemari yang tahu berapa banyak barangnya dan bisa mengambil barang nomor sekian.
+- **DataLoader** → petugas yang mengambil barang dari lemari dalam nampan berisi 128, dan mengacak urutannya setiap hari.
+- **Batch dan epoch** → batch = satu nampan; epoch = sudah membaca seluruh isi lemari satu kali.
+- **`model.train()` / `model.eval()`** → mode latihan (pemain boleh diacak posisinya, seperti dropout) vs mode pertandingan resmi (formasi tetap).
+- **Checkpoint** → tombol *save game*: kalau listrik padam, kamu tidak mulai dari awal, dan kamu menyimpan level terbaik, bukan hanya yang terakhir.
+
 ## Exit criteria — tes diri
 - [ ] Tulis `train_one_epoch` dan `evaluate` dari nol tanpa melihat.
 - [ ] Catat loss & accuracy train/val per epoch, lalu jelaskan kapan model mulai overfit.

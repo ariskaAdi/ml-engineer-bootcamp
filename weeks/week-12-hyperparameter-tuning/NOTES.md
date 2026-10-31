@@ -29,6 +29,13 @@ Hasil: CV 0,8356 → test 0,8365. Hampir sama, berarti proses validasinya jujur.
 - [x] Model akhir disimpan beserta preprocessing (pipeline joblib).
 - [x] Versi library tercatat di `uv.lock`.
 
+## Analogi untuk orang awam
+- **Parameter vs hyperparameter** → parameter = rasa masakan yang terbentuk saat memasak; hyperparameter = setelan kompor dan lama memasak yang kamu pilih sebelum mulai.
+- **Grid search** → mencoba semua kombinasi suhu oven × waktu pada tabel. Teliti, tapi jumlahnya meledak kalau setelannya banyak.
+- **Random search** → mencoba 40 kombinasi acak. Biasanya cepat menemukan setelan yang bagus, karena hanya 1–2 setelan yang benar-benar penting.
+- **Test hanya sekali** → mencicipi hidangan final di depan juri hanya satu kali. Kalau kamu memasak ulang setelah melihat reaksi juri, penilaiannya tidak lagi adil.
+- **Aturan one-standard-error** → dua mobil yang kecepatannya hampir sama: pilih yang lebih irit dan mudah dirawat.
+
 ## Exit criteria — tes diri
 - [ ] Jalankan ulang script dan dapatkan angka yang sama.
 - [ ] Jelaskan alasan memilih model akhir dengan angka dari REPORT.md.

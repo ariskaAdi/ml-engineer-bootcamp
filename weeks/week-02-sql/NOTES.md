@@ -80,6 +80,14 @@ Cara mencoba: nyalakan Docker Desktop, lalu `docker compose -f weeks/week-02-sql
 - Pembagian integer: `1/2 = 0`. Tulis `100.0 * a / b`.
 - `pd.read_sql` tanpa `parse_dates` → tanggal terbaca sebagai teks.
 
+## Analogi untuk orang awam
+- **Database dengan beberapa tabel** → lemari arsip dengan laci terpisah: laci produk, laci kota, laci pesanan. Pesanan cukup menulis "produk nomor 3" daripada menulis ulang semua detail produk.
+- **JOIN** → menyatukan kembali informasi dari laci-laci itu dengan mencocokkan nomor ID, seperti mencocokkan nomor kursi di tiket dengan daftar penonton.
+- **INNER vs LEFT JOIN** → daftar hadir: INNER hanya mencatat orang yang diundang **dan** datang; LEFT mencatat semua undangan, yang tidak datang ditandai kosong.
+- **WHERE vs HAVING** → WHERE menyaring orang di pintu masuk; HAVING menyaring kelompok setelah semua orang dikelompokkan per meja.
+- **Window function** → papan klasemen liga: setiap tim tetap punya barisnya sendiri, tapi ditambah informasi peringkat dan total poin dibandingkan tim lain.
+- **SQL injection** → formulir yang menyuruh petugas "tulis apa pun yang dikatakan tamu sebagai perintah". Parameter `?` membuat petugas memperlakukan ucapan tamu hanya sebagai data, bukan perintah.
+
 ## Exit criteria — tes diri
 Tanpa melihat file `sql/`, tulis query untuk:
 - [ ] Revenue per kategori per kota (2 JOIN + GROUP BY).

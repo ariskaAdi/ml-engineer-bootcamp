@@ -57,6 +57,14 @@ Val **accuracy** hampir tidak turun (0,835), tapi val **loss** naik dua kali lip
 
 Kombinasi yang umum: dropout + weight decay + early stopping + augmentasi data.
 
+## Analogi untuk orang awam
+- **Learning rate** → menyetir sambil mencari parkir: terlalu pelan tidak sampai-sampai, terlalu cepat bablas melewati tempat parkirnya.
+- **Batch size** → mengambil keputusan berdasarkan pendapat 16 orang (cepat berubah, ramai) atau 1.024 orang (stabil, tapi jarang berganti arah).
+- **Overfitting** → aktor yang menghafal naskah persis untuk satu penonton, lalu kebingungan saat penontonnya bertanya hal lain.
+- **Dropout** → latihan tim sepak bola dengan pemain yang diacak absen: setiap pemain terpaksa bisa bermain di berbagai posisi, tidak bergantung pada satu bintang.
+- **Weight decay** → pajak untuk bobot yang terlalu besar: model didorong memakai solusi yang sederhana.
+- **Early stopping** → berhenti memanggang kue ketika sudah matang, sebelum gosong; dan simpan kue di momen terbaiknya.
+
 ## Exit criteria — tes diri
 - [ ] Dari plot `week23_4_regularization.png`, tunjukkan titik mulai overfit dan jelaskan buktinya (train vs val loss, gap akurasi).
 - [ ] Jelaskan kenapa val loss bisa naik walaupun val accuracy hampir tetap.

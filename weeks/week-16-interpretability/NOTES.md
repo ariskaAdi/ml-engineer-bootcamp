@@ -66,6 +66,14 @@ Aturan: ubah **satu** faktor, gunakan fold CV yang **sama**, lalu bandingkan per
 Setiap eksperimen dicatat dengan: waktu, hipotesis, apa yang diubah, metrik, kesimpulan (`outputs/experiments_week16.jsonl`, bisa dibaca dengan `pd.read_json(path, lines=True)`).
 Kenapa per fold? Variasi **antar** fold (±0,01) lebih besar daripada efek yang diuji. Membandingkan pada fold yang sama menghilangkan variasi itu, sehingga perbedaan kecil yang konsisten bisa terdeteksi.
 
+## Analogi untuk orang awam
+- **Asosiasi** → payung yang terbuka sering muncul bersama jalan basah.
+- **Penjelasan model** → model memakai "ada payung terbuka" untuk menebak "jalan basah". Itu jujur tentang cara kerja model.
+- **Kausalitas** → menutup semua payung tidak akan membuat jalan kering. Sama seperti memblokir halaman cancel yang tidak menghentikan niat pelanggan untuk berhenti.
+- **Permutation importance** → mengacak satu bahan resep lalu melihat seberapa rusak rasanya.
+- **SHAP** → membagi tagihan makan bersama secara adil: berapa "kontribusi" setiap fitur terhadap skor akhir satu pelanggan.
+- **Eksperimen terkontrol** → mengubah satu bumbu saja per percobaan, dengan kompor dan bahan yang sama, supaya tahu persis apa penyebab perubahan rasa.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan dengan contoh beda asosiasi, penjelasan model, dan kausalitas.
 - [ ] Jelaskan kenapa SHAP tinggi untuk `visited_cancel_page` tidak berarti memblokir halaman itu akan mengurangi churn.

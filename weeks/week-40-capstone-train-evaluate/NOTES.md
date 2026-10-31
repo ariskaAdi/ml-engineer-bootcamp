@@ -22,6 +22,11 @@ uv run python capstone/ml/notebooks/error_analysis.py
 3. **Angka test yang di bawah target dilaporkan apa adanya** (96,9% vs 98%), lalu sistem dirancang untuk menanggulanginya (zona *warn*), bukan dengan memutar threshold di test.
 4. **Analisis error memengaruhi desain produk**: 26 pesan di zona abu-abu, 58% spam → terlalu campur untuk keputusan otomatis → 3 aksi di gateway.
 
+## Analogi untuk orang awam
+- **N-gram karakter** → mengenali tulisan tangan penipu dari gaya hurufnya ("fr33", "£1000"), bukan hanya dari kata-katanya.
+- **Metrik pemilihan yang stabil** → memilih atlet dari rata-rata banyak lomba, bukan dari satu lomba yang hasilnya sangat dipengaruhi angin.
+- **Zona abu-abu (warn)** → amplop mencurigakan tetap diantar, tapi diberi stiker "hati-hati", daripada langsung dibuang.
+
 ## Exit (pribadi)
 - [ ] Jalankan ulang training dan dapatkan angka yang sama (seed + hash data di `metadata.json`).
 - [ ] Jelaskan setiap FP/FN di laporan dengan kata-kata sendiri.

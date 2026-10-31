@@ -48,6 +48,12 @@ Isi setelah menjalankan di Colab:
 | 256 | 0,182 | | |
 | 2048 | 80,1 | | |
 
+## Analogi untuk orang awam
+- **Tensor** → spreadsheet yang bisa bertumpuk ke banyak dimensi (tabel → buku → rak buku), plus kemampuan dihitung di GPU.
+- **CPU vs GPU** → CPU seperti beberapa profesor jenius; GPU seperti ribuan siswa SD. Untuk 10.000 soal penjumlahan sederhana, ribuan siswa jauh lebih cepat. Untuk satu soal rumit, profesor lebih cocok.
+- **Device mismatch** → satu chef di dapur A, bahan masakannya di dapur B. Masakan tidak bisa dibuat sampai bahan dan chef berada di dapur yang sama.
+- **Workload kecil tidak lebih cepat di GPU** → memanggil truk pengiriman untuk mengirim satu amplop: waktu persiapan truknya lebih lama daripada mengantar sendiri dengan motor.
+
 ## Exit criteria — tes diri
 - [ ] Sengaja buat device mismatch, baca pesan error-nya, dan perbaiki.
 - [ ] Jelaskan kenapa matmul 16×16 tidak lebih cepat di GPU.

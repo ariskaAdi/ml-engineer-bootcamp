@@ -58,6 +58,13 @@ Hasil: **1020 → 975 baris**, tanpa nilai kosong.
 - `SettingWithCopyWarning`: terjadi saat mengubah hasil filter. Pakai `df = df[...].copy()` atau `.loc[mask, kolom] = ...`.
 - `np.std(x)` ≠ `df["x"].std()` karena `ddof`.
 
+## Analogi untuk orang awam
+- **Array NumPy vs list Python** → list Python seperti kasir yang menghitung belanjaan satu per satu; NumPy seperti mesin pemindai yang memproses seluruh keranjang sekaligus.
+- **Shape dan axis** → tabel nilai rapor: `axis=0` = menjumlahkan ke bawah (satu hasil per mata pelajaran), `axis=1` = menjumlahkan ke samping (satu hasil per siswa).
+- **Broadcasting** → guru berkata "semua siswa dapat tambahan 5 poin": satu angka otomatis "direntangkan" ke seluruh kelas tanpa ditulis berulang.
+- **Data cleaning** → mencuci sayur sebelum dimasak: buang yang busuk (duplikat), rapikan potongannya (nama kota), dan isi yang kurang dengan perkiraan yang masuk akal (harga median per produk).
+- **Mean vs median** → di ruangan berisi 9 karyawan dan 1 miliarder, rata-rata gaji tampak tinggi sekali, padahal median (orang di tengah) lebih jujur menggambarkan "orang biasa".
+
 ## Exit criteria — tes diri
 - [ ] Bisa membersihkan `sales_raw.csv` dari notebook kosong dan menjelaskan 6 langkah di atas.
 - [ ] Bisa menghitung mean, median, dan std tanpa `.describe()`.

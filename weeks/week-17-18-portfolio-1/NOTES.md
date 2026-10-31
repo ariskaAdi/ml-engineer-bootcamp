@@ -46,6 +46,13 @@ Tes yang butuh model terlatih otomatis di-skip kalau `artifacts/` belum ada.
 ### Reproducibility
 `metadata.json`: seed, SHA-256 file data, versi Python/sklearn/pandas, skor semua kandidat, threshold, skor test. Ditambah `uv.lock` untuk versi library yang persis sama.
 
+## Analogi untuk orang awam
+- **Portfolio project** → rumah contoh dari kontraktor: calon klien tidak cukup diberi tahu "saya bisa membangun", tapi ingin melihat rumah yang bisa dimasuki.
+- **Leakage `duration`** → menebak siapa pemenang lomba lari setelah melihat foto garis finis. Akurat, tapi tidak berguna untuk memasang taruhan sebelum lomba.
+- **Memindah kode notebook ke `src/`** → memindahkan resep dari coretan di sobekan kertas ke buku resep yang rapi dan bernomor, sehingga orang lain bisa memasak hal yang sama.
+- **Tes otomatis** → alarm asap di dapur: kamu berharap tidak pernah berbunyi, tapi kalau ada yang salah, ia langsung memberi tahu.
+- **Pergeseran waktu** → strategi jualan yang laris di musim kemarau belum tentu laris di musim hujan.
+
 ## Exit criteria — tes diri
 - [ ] Orang lain bisa menjalankan 4 perintah di README dan mendapat angka yang sama.
 - [ ] Logika utama ada di modul yang bisa di-import, bukan hanya di notebook.

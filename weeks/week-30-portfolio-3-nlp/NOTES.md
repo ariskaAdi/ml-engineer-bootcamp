@@ -23,6 +23,11 @@ Kode: [projects/p3-news-topics/](../../projects/p3-news-topics/) — baca [READM
 - [x] Metrik yang sesuai (accuracy + macro-F1, kelas seimbang) dan contoh benar/salah
 - [x] Dokumentasi setup dan inference
 
+## Analogi untuk orang awam
+- **TF-IDF + banyak data vs DistilBERT + sedikit data** → siswa biasa yang mengerjakan 115.000 soal latihan bisa mengalahkan siswa jenius yang hanya mengerjakan 8.000 soal.
+- **Pretrained menang di data sedikit** → dengan bahan latihan yang sama sedikitnya, orang yang sudah banyak membaca (pretrained) lebih cepat paham.
+- **Business ↔ Sci/Tech** → berita "Apple meluncurkan chip baru" bisa masuk rubrik bisnis atau teknologi; kadang redakturnya sendiri tidak sepakat (label ambigu).
+
 ## Exit criteria — tes diri
 - [ ] Jalankan versi cepat (`--skip-bert --skip-emb`) dan inference dari README.
 - [ ] Jelaskan kenapa TF-IDF full mengalahkan DistilBERT di sini, dan kapan hasilnya akan terbalik.

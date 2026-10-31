@@ -18,6 +18,11 @@ Bahan utama: [capstone/docs/04_walkthrough_and_interview.md](../../capstone/docs
 | Model selection | Aturan 1-SE: P1 (LogReg vs RF), capstone (LogReg vs SVM) |
 | Metric trade-off | Week 8 (threshold biaya 0,09), Week 15 (precision 30%), capstone (precision 98% + zona warn) |
 
+## Analogi untuk orang awam
+- **Walkthrough 5 menit** → *elevator pitch*: kalau kamu tidak bisa menjelaskan proyekmu selama naik lift, pendengar kehilangan minat.
+- **Gap analysis** → peta pendakian: menandai pos yang sudah dilewati dan pos yang masih harus dicapai sebelum puncak (lowongan target).
+- **Portfolio di GitHub** → etalase toko: recruiter melihat barang yang sudah jadi, bukan hanya membaca brosur (CV).
+
 ## Penilaian akhir (isi sendiri)
 - [ ] Reviewer bisa mereproduksi inference capstone dari README.
 - [ ] Setiap keputusan model didukung angka eksperimen.

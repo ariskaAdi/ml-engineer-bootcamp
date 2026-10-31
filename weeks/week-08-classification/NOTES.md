@@ -64,6 +64,14 @@ Koefisien LogReg (fitur distandarkan): kontrak 2 tahun (−0,98), tenure (−0,6
 | 51 | 0,831 | 0,712 |
 Tanpa scaling, jarak didominasi `total_charges` (ribuan), sehingga fitur lain diabaikan. k=1 terlalu sensitif terhadap noise (overfit); k besar lebih halus.
 
+## Analogi untuk orang awam
+- **Logistic regression** → juri yang memberi skor, lalu skor diubah menjadi peluang 0–100%.
+- **KNN** → menilai seseorang dari 15 tetangga terdekatnya: kalau kebanyakan tetangganya pindah langganan, dia juga kemungkinan pindah.
+- **Decision tree** → permainan "20 pertanyaan": "Kontraknya bulanan? Ya. Sudah langganan < 6 bulan? Ya. → kemungkinan besar churn."
+- **Precision vs recall** → jala ikan: recall = berapa banyak ikan di laut yang tertangkap; precision = berapa banyak isi jala yang benar-benar ikan (bukan sampah).
+- **Threshold** → tinggi palang di pintu: palang rendah, banyak yang masuk (recall tinggi, banyak alarm palsu); palang tinggi, sedikit yang masuk (precision tinggi, banyak yang terlewat).
+- **Accuracy menyesatkan** → satpam yang selalu bilang "aman" di kota yang jarang ada maling: benar 99% waktu, tapi tidak pernah menangkap satu maling pun.
+
 ## Exit criteria — tes diri
 - [ ] Untuk kasus spam filter, fraud, dan diagnosis penyakit: metrik apa dan threshold tinggi atau rendah? Kenapa?
 - [ ] Hitung precision, recall, F1 dari confusion matrix di atas dengan tangan.

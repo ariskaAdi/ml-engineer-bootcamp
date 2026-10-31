@@ -21,5 +21,10 @@ Supaya tidak "mencari-cari" metrik atau split yang kebetulan membuat model terli
 - Model ringan → bisa di-deploy di free tier, latensi rendah.
 - Ada jebakan nyata (duplikat, label noise, data lama) untuk dibahas di interview.
 
+## Analogi untuk orang awam
+- **Experiment plan sebelum eksperimen** → menentukan aturan pertandingan sebelum pertandingan dimulai, bukan mengubah aturan setelah tahu siapa yang kalah.
+- **Biaya FP pada spam filter** → satpam yang terlalu galak mengusir tamu penting (OTP, pesan keluarga). Lebih baik sesekali meloloskan tukang promosi daripada mengusir tamu penting.
+- **Duplikat di data** → soal ujian yang sama persis muncul di buku latihan dan di ujian; nilai ujian jadi mengukur hafalan.
+
 ## Exit (pribadi)
 - [ ] Bisa menjelaskan masalah, data, metrik, dan validasi dalam 1 menit.

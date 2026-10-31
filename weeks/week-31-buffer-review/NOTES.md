@@ -25,5 +25,8 @@ Data sedikit, latensi/biaya ketat, butuh interpretabilitas, teks dengan kata kun
 ## Opsional: lihat Track A
 Skim [week-27-29-track-a-cv/](../week-27-29-track-a-cv/) (konvolusi dengan tangan, transfer learning ResNet18, OpenCV + analisis error), supaya paham dasar computer vision.
 
+## Analogi untuk orang awam
+- **Review NLP** → seperti mengulang pelajaran bahasa: dari menghitung kata (TF-IDF), memahami konteks (transformer), sampai mencari referensi sebelum menjawab (RAG).
+
 ## Catatan pribadi (isi sendiri)
 - Exit criteria yang diulang:

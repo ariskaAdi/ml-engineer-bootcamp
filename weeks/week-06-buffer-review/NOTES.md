@@ -81,6 +81,10 @@ Bandingkan dengan turunan numerik `(f(w+h) − f(w−h)) / 2h` untuk h kecil (gr
 - [ ] Setiap folder week punya `NOTES.md` dengan weekly review terisi.
 - [ ] Commit: `week-06: phase 1 review`.
 
+## Analogi untuk orang awam
+- **Buffer week** → hari istirahat di rencana pendakian: dipakai kalau ada yang tertinggal, dilewati kalau semua lancar. Melanjutkan dengan fondasi yang retak hanya membuat bangunan berikutnya miring.
+- **Tes "jelaskan dengan suara"** → kalau kamu bisa menjelaskan resep ke teman tanpa melihat catatan, berarti kamu benar-benar paham, bukan sekadar hafal.
+
 ## Catatan pribadi (isi sendiri)
 - Exit criteria yang diulang:
 - Yang masih membingungkan:

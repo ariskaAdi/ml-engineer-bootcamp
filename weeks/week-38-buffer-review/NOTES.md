@@ -24,5 +24,8 @@ Setiap skenario: tebak gejalanya dulu, jalankan, lalu cari penyebabnya **dari lo
 <details><summary>Training-serving skew itu apa dan bagaimana mencegahnya?</summary>Preprocessing berbeda antara training dan produksi. Cegah dengan menyimpan seluruh pipeline (bukan hanya model), satu fungsi preprocessing bersama, dan tes yang membandingkan prediksi service dengan prediksi offline.</details>
 <details><summary>Drift terdeteksi. Apakah langsung retrain?</summary>Belum tentu. Cek dulu bug pipeline data, lalu dampaknya ke metrik bisnis. Bisa cukup menyesuaikan threshold. Kalau retrain: validasi berbasis waktu, bandingkan dengan champion, deploy bertahap, siapkan rollback.</details>
 
+## Analogi untuk orang awam
+- **Latihan "rusak lalu perbaiki"** → latihan pemadam kebakaran: kebakaran disimulasikan saat tenang, supaya saat kejadian sungguhan semua orang tahu harus melihat ke mana (log) dan melakukan apa.
+
 ## Catatan pribadi (isi sendiri)
 - Exit criteria yang diulang:

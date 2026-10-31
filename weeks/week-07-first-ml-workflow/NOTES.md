@@ -53,6 +53,13 @@ Setelah model dan setting dipilih, validation tidak lagi diperlukan untuk memili
 - Melatih dengan `log(y)` tapi lupa `exp()` sebelum menghitung metrik → MAE dalam satuan log, tidak bermakna.
 - `pd.get_dummies` pada seluruh data sebelum split aman untuk kategori tetap, tapi Week 9 akan memakai `OneHotEncoder` di dalam pipeline (lebih aman untuk kategori baru di produksi).
 
+## Analogi untuk orang awam
+- **Train / validation / test** → belajar dari buku latihan (train), mencoba try-out untuk memilih strategi belajar (validation), lalu ujian akhir yang soalnya belum pernah dilihat (test). Kalau sudah mengintip soal ujian, nilaimu tidak lagi jujur.
+- **Baseline** → tebakan "orang malas": selalu menebak harga rata-rata. Kalau model canggihmu tidak lebih baik dari ini, model itu tidak berguna.
+- **MAE** → rata-rata meleset berapa juta. **RMSE** → sama, tapi kesalahan besar dihukum lebih berat, seperti denda yang naik berlipat untuk pelanggaran yang lebih parah.
+- **R²** → seberapa banyak "keragaman harga" yang bisa dijelaskan model. 0 = sama saja dengan menebak rata-rata, 1 = sempurna.
+- **Koefisien ≠ sebab** → model bilang "kamar tidur menaikkan harga", padahal kamar tidur hanya "ikut-ikutan" luas bangunan.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan kenapa model terpilih lebih baik daripada baseline, dengan angka MAE/RMSE/R².
 - [ ] Jelaskan beda MAE dan RMSE dan kapan memilih masing-masing.

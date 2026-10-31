@@ -62,6 +62,13 @@ Data rumah: CV acak MAE 181,7 vs latih 2022–2024 / uji 2025 MAE 192,6. Selisih
 - Split acak pada data waktu.
 - Memilih model berdasarkan test set.
 
+## Analogi untuk orang awam
+- **Underfitting** → siswa yang hanya belajar "jawabannya selalu C": buruk di latihan, buruk di ujian.
+- **Overfitting** → siswa yang menghafal kunci jawaban buku latihan kata per kata: nilai latihan 100, tapi gagal begitu soalnya sedikit diubah.
+- **Regularisasi** → aturan "jawab dengan sederhana": siswa tidak boleh membuat jawaban terlalu berbelit hanya untuk mencocokkan setiap detail soal latihan.
+- **K-fold cross-validation** → mengadakan 5 try-out dengan paket soal berbeda, lalu melihat rata-rata dan seberapa naik-turun nilainya, bukan menilai dari satu try-out saja.
+- **Split waktu (TimeSeriesSplit)** → memprediksi cuaca besok: kamu hanya boleh memakai data sampai hari ini. Split acak sama dengan "mengintip ramalan dari koran besok".
+
 ## Exit criteria — tes diri
 - [ ] Diberi skor train 0,98 dan val 0,70: apa diagnosisnya dan apa tiga hal yang bisa dicoba?
 - [ ] Untuk prediksi permintaan minggu depan, data pasien dengan banyak kunjungan, dan deteksi spam: split apa yang dipakai?

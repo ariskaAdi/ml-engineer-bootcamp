@@ -19,6 +19,11 @@ Dokumen: [capstone/docs/03_deployment.md](../../capstone/docs/03_deployment.md).
 | Keputusan | call/skip + prioritas | deliver/warn/quarantine | Zona abu-abu dari analisis error |
 | Bypass model | Kontak ≥ 10 kali → do_not_call | Pengirim di kontak → deliver | Aturan bisnis yang lebih tepat daripada model |
 
+## Analogi untuk orang awam
+- **Fail-open** → kalau mesin pemindai di bandara rusak, penumpang tetap boleh lewat dengan pemeriksaan manual, daripada menutup bandara seharian. Untuk SMS, lebih baik spam lolos sebentar daripada semua pesan tertahan.
+- **Tidak menyimpan isi SMS** → kantor pos yang mencatat berat dan cap amplop, tapi tidak pernah membuka dan menyalin isi suratnya.
+- **Kontak bypass** → surat dari keluarga yang sudah dikenal langsung diantar tanpa diperiksa mesin.
+
 ## Exit (pribadi)
 - [ ] `docker compose ... up` lalu `bash capstone/examples/requests.sh` memberi 6 respons sesuai tabel di dokumen.
 - [ ] Matikan container inference dan jelaskan respons gateway.

@@ -56,6 +56,14 @@ uv add dvc; dvc init; dvc add projects/p1-bank-marketing/data/bank-additional-fu
 git add projects/p1-bank-marketing/data/*.dvc .dvc; git commit -m "track data with dvc"
 ```
 
+## Analogi untuk orang awam
+- **Experiment tracking** → buku catatan laboratorium: setiap percobaan dicatat bahannya, takarannya, suhu, dan hasilnya, sehingga bisa diulang persis.
+- **Model registry** → gudang dengan rak bernomor versi: v1, v2, v3. Tidak ada yang ditimpa.
+- **Alias champion** → papan "menu andalan hari ini" yang menunjuk ke salah satu resep. Mengganti menu andalan cukup mengganti papan, tidak perlu mengubah dapur.
+- **Rollback** → tombol *undo*: kalau resep baru dikeluhkan pelanggan, papan dikembalikan ke resep sebelumnya dalam hitungan menit.
+- **Hash data** → sidik jari dataset: kalau datanya berubah satu baris pun, sidik jarinya berbeda.
+- **skops vs pickle** → paket yang diperiksa satpam sebelum dibuka (skops) vs paket yang langsung dibuka tanpa tahu isinya (pickle).
+
 ## Exit criteria — tes diri
 - [ ] Dari `model_version` di respons API, temukan run MLflow-nya dan sebutkan parameter, metrik, commit, dan hash data.
 - [ ] Lakukan rollback champion ke versi sebelumnya dan export ulang.

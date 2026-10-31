@@ -9,7 +9,7 @@
 # Kamu juga bisa membuka `data/sales.db` dengan ekstensi VS Code "SQLite Viewer"
 # atau aplikasi DB Browser for SQLite.
 
-# %%
+# %% 
 import sqlite3
 from pathlib import Path
 

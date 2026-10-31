@@ -51,6 +51,13 @@ Yang dicatat: request id, path, status, latensi, versi model, jenis error. Yang 
 - Tes yang butuh model terlatih otomatis `skip` karena artefak tidak di-commit.
 - Setelah push: tab **Actions** di GitHub menampilkan hasilnya. Tambahkan badge di README.
 
+## Analogi untuk orang awam
+- **Unit test** → menguji setiap komponen mobil secara terpisah (rem, lampu, klakson) sebelum dirakit.
+- **Fake / mock** → boneka uji tabrak: menggantikan manusia sungguhan supaya pengujian aman dan bisa diulang.
+- **CI** → inspeksi otomatis di setiap pintu keluar pabrik: setiap mobil (setiap push) dicek sebelum boleh keluar.
+- **Fail explicitly** → lampu indikator di dashboard yang jelas ("bensin habis", "rem bermasalah"), bukan mobil yang tiba-tiba mati tanpa tanda.
+- **Log tanpa data sensitif** → buku tamu yang mencatat jam datang dan keperluan, tapi tidak mencatat isi dompet tamu.
+
 ## Exit criteria — tes diri
 - [ ] Semua tes hijau secara lokal; push dan pastikan CI hijau.
 - [ ] Sengaja rusak satu aturan (misalnya batas umur) dan lihat tes mana yang gagal.

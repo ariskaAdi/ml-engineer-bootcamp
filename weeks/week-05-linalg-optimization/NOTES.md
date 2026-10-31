@@ -43,6 +43,13 @@ Luas tanah bernilai ratusan, sedangkan bias berskala 1. Tanpa standardisasi, gra
 ## 6. Loss surface
 Untuk regresi linear + MSE, loss berbentuk **mangkuk (convex)**: hanya ada satu minimum, jadi GD pasti sampai kalau learning rate cukup kecil. Neural network tidak convex, tapi ide langkahnya sama.
 
+## Analogi untuk orang awam
+- **Vektor dan dot product** → resep: jumlah setiap bahan (fitur) dikali seberapa penting bahan itu bagi rasa (bobot), lalu dijumlahkan menjadi skor akhir.
+- **Gradient descent** → turun gunung saat kabut tebal: kamu tidak melihat lembah, tapi bisa merasakan kemiringan di bawah kaki, lalu melangkah ke arah yang paling menurun.
+- **Learning rate** → panjang langkah. Terlalu kecil = sampai bawah besok pagi; terlalu besar = melompati lembah dan malah naik ke bukit seberang (divergen).
+- **Chain rule** → efek domino atau rantai pabrik: kalau mesin A melambat 2× dan mesin B bergantung pada A dengan faktor 3×, efek totalnya 6×. Backpropagation menghitung efek berantai ini dari ujung ke awal.
+- **Standardisasi fitur** → menyamakan satuan sebelum membandingkan (cm vs km). Tanpa itu, "gunung" loss jadi lembah sempit memanjang yang sulit dituruni.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan dengan kata-kata: bagaimana gradient descent mengubah parameter supaya loss turun? Kenapa tandanya minus?
 - [ ] Tulis ulang loop GD dari nol tanpa melihat script.

@@ -50,6 +50,10 @@ Satu objek menyimpan semua langkah preprocessing + model. Data mentah → predik
 - [ ] `GridSearchCV` dengan nama parameter `model__C`.
 - [ ] Hitung precision/recall dari confusion matrix.
 
+## Analogi untuk orang awam
+- **Latihan menjelaskan** → kalau kamu bisa menjelaskan overfitting ke nenekmu dengan contoh siswa yang menghafal kunci jawaban, kamu siap menjelaskannya ke pewawancara.
+- **Latihan kode dari nol** → seperti belajar menyetir: menonton orang lain menyetir tidak membuatmu bisa menyetir.
+
 ## Catatan pribadi (isi sendiri)
 - Topik yang masih belum lancar dijelaskan:
 - Rencana:

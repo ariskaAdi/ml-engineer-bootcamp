@@ -53,6 +53,13 @@ Selalu catat: versi Python, torch, CUDA, cuDNN, nama GPU/CPU, seed, hyperparamet
 2. Perbaiki data pipeline, naikkan batch, pakai mixed precision (`torch.autocast`), `torch.compile`.
 3. Kernel kustom (CUDA C++/Triton) hanya untuk operasi baru yang belum ada di library, atau untuk riset/infra performa tinggi. Itu pekerjaan spesialis.
 
+## Analogi untuk orang awam
+- **Warm-up dan synchronize** → mengukur waktu lari: jangan menghitung waktu memakai sepatu, dan jangan menghentikan stopwatch saat pelari baru *berangkat* (GPU asinkron), tapi saat ia benar-benar sampai.
+- **Bottleneck data loading** → koki super cepat yang terus menunggu asisten mengupas bawang. Membeli kompor lebih besar tidak membantu; yang perlu dipercepat adalah persiapan bahannya.
+- **Memori GPU** → meja kerja: selain alat (parameter), kamu butuh ruang untuk semua bahan setengah jadi (aktivasi). Meja penuh → "out of memory".
+- **Seed** → mengocok kartu dengan cara yang dicatat, sehingga urutan kartunya bisa diulang persis.
+- **Menulis kode CUDA sendiri** → membuat mesin mobil sendiri hanya untuk ke kantor. Biasanya cukup memakai mesin yang sudah disediakan pabrik (PyTorch).
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan perbedaan kecepatan CPU vs GPU yang kamu ukur di Colab, dan 2 keterbatasan pengukuranmu (misalnya GPU Colab berbagi dengan pengguna lain, ukuran model sangat kecil, waktu loading tidak termasuk).
 - [ ] Jelaskan kenapa GPU bisa menganggur walaupun model berjalan di GPU.

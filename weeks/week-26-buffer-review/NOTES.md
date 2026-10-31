@@ -36,5 +36,9 @@ Dictionary nama parameter → tensor bobot. Tidak berisi kode arsitektur; arsite
 
 Cara memutuskan: buka 20 lowongan "Junior ML Engineer" di kota/negara targetmu, hitung berapa yang menyebut NLP/LLM vs computer vision.
 
+## Analogi untuk orang awam
+- **Memilih track** → memilih jurusan spesialis setelah lulus dokter umum: lihat dulu lowongan yang paling banyak tersedia di daerahmu.
+- **Kuis debug** → seperti montir yang langsung bisa menebak penyebab dari bunyi mesin; kemampuan ini datang dari banyak latihan "rusak lalu perbaiki".
+
 ## Catatan pribadi (isi sendiri)
 - Track yang dipilih dan alasannya:

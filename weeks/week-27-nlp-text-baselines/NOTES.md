@@ -42,6 +42,13 @@ Bigram (`ngram_range=(1, 2)`) mengembalikan sebagian urutan lokal: `"not good"` 
 
 Error rate kalimat yang mengandung negasi/kontras (`not, n't, no, never, but, though`): **25,2%** vs **15,5%** tanpa. Transformer (Week 28) membaca seluruh kalimat sekaligus dan memperhitungkan posisi serta hubungan antar kata, sehingga seharusnya lebih baik pada kasus-kasus ini.
 
+## Analogi untuk orang awam
+- **Tokenisasi** → memotong kalimat menjadi potongan-potongan kata, seperti memotong roti menjadi irisan sebelum dihitung.
+- **Vocabulary** → kamus pribadi model: kata yang tidak ada di kamus diabaikan.
+- **Bag-of-words** → memasukkan semua kata ke kantong lalu menghitungnya. Urutan hilang: "anjing menggigit orang" dan "orang menggigit anjing" jadi sama.
+- **TF-IDF** → kata yang muncul di semua surat ("yang", "dan") seperti stempel yang ada di setiap dokumen, jadi tidak membantu membedakan. Kata langka seperti "mahakarya" adalah petunjuk yang kuat.
+- **Validation tidak mirip test** → berlatih tes membaca dengan potongan kalimat pendek, lalu diuji dengan paragraf panjang. Nilai latihan tampak bagus tapi menipu.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan langkah dari kalimat mentah sampai vektor TF-IDF tanpa melihat catatan.
 - [ ] Jalankan ulang script dan dapatkan angka yang sama (reproducible: seed + versi library di `uv.lock`).

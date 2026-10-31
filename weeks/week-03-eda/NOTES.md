@@ -40,6 +40,13 @@ Tiga alasan korelasi muncul tanpa sebab-akibat: (1) confounder, (2) arah terbali
 ## Checklist plot yang baik
 Judul yang menyebut temuan, label sumbu dan satuan, skala log kalau datanya miring, `alpha` kecil kalau titiknya ribuan.
 
+## Analogi untuk orang awam
+- **EDA** → dokter yang memeriksa pasien (tekanan darah, suhu, riwayat) sebelum memberi obat. Kalau langsung memberi obat (model) tanpa memeriksa, bisa salah besar.
+- **Menulis pertanyaan dulu** → berbelanja dengan daftar; tanpa daftar, kamu pulang membawa banyak barang yang tidak perlu (plot yang tidak menjawab apa-apa).
+- **Distribusi miring** → penghasilan di satu kampung: kebanyakan sederhana, segelintir sangat kaya, sehingga "ekor" grafik memanjang ke kanan.
+- **Outlier** → pemain basket di antara anak SD. Tingginya tidak "salah data"; dia memang berbeda. Jangan dibuang hanya karena berbeda.
+- **Korelasi ≠ kausalitas** → penjualan es krim dan kasus tenggelam naik bersamaan. Es krim tidak menyebabkan tenggelam; keduanya disebabkan musim panas (confounder). Sama seperti kamar tidur dan harga rumah yang sama-sama dipengaruhi luas bangunan.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan 3 temuan dari plot dengan kata-kata sendiri.
 - [ ] Jelaskan kenapa "kamar tidur menyebabkan harga naik" tidak bisa disimpulkan dari plot 3.

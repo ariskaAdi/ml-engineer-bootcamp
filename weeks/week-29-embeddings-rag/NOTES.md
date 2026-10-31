@@ -61,6 +61,14 @@ Percobaan pertama (retrieval buruk) → LLM menjawab "tidak ditemukan" untuk sem
 | Mengubah *gaya/format* output LLM secara konsisten | Fine-tuning LLM (LoRA) | Prompt saja tidak cukup konsisten |
 Fine-tuning **tidak** cocok untuk "menambah pengetahuan" yang sering berubah; itu tugas retrieval.
 
+## Analogi untuk orang awam
+- **Embedding** → koordinat GPS untuk makna: kalimat yang artinya mirip berada berdekatan, walaupun memakai bahasa atau kata yang berbeda.
+- **Cosine similarity** → membandingkan arah jarum kompas, bukan panjangnya.
+- **Semantic search vs keyword search** → pustakawan yang paham maksudmu ("buku tentang cara berhenti menghafal") vs mesin pencari yang hanya mencocokkan kata persis.
+- **Chunking** → memotong buku tebal menjadi kartu catatan kecil supaya mudah dicari; kartu yang terlalu panjang ujungnya terpotong dan hilang.
+- **RAG** → ujian *open book*: model mencari halaman yang relevan dulu, lalu menjawab berdasarkan halaman itu dan menyebutkan sumbernya.
+- **Hallucination** → siswa yang tidak menemukan jawabannya di buku tapi tetap menulis jawaban yang terdengar meyakinkan. Instruksi "kalau tidak ada, bilang tidak tahu" membantu.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan dengan 3 contoh kasus kapan memilih prompt, RAG, atau fine-tuning.
 - [ ] Jelaskan kenapa percobaan pertama retrieval gagal dan bagaimana mengetahuinya.

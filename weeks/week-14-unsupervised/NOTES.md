@@ -50,6 +50,13 @@ PCA mencari arah baru (komponen) yang menangkap variasi data sebanyak mungkin. K
 - Kegunaan: visualisasi 2D (`week14_2_pca.png`), mengurangi fitur yang saling berkorelasi, mempercepat model.
 - Keterbatasan: komponen sulit dijelaskan ke orang bisnis; PCA linear; **wajib scaling dulu** (kalau tidak, fitur dengan angka terbesar mendominasi PC1).
 
+## Analogi untuk orang awam
+- **Clustering** → menyortir tumpukan kancing tanpa label: kamu mengelompokkan berdasarkan warna dan ukuran, tapi nama kelompoknya kamu sendiri yang memberi.
+- **K-Means** → menaruh 4 tiang bendera di lapangan, setiap orang berjalan ke tiang terdekat, lalu tiang dipindah ke tengah kerumunannya. Diulang sampai tidak ada yang pindah.
+- **Scaling** → membandingkan jarak antar kota dengan satuan campur (meter dan kilometer): angka yang besar mendominasi walaupun tidak lebih penting.
+- **Cluster ≠ segmen bisnis** → membagi siswa ke 4 kelompok berdasarkan tinggi badan selalu berhasil, tapi itu tidak berarti ada "4 jenis siswa" yang perlu diajar dengan cara berbeda.
+- **PCA** → memotret patung 3D dari sudut terbaik: dari 3 dimensi menjadi foto 2 dimensi, tapi sebagian besar bentuknya tetap terlihat.
+
 ## Exit criteria — tes diri
 - [ ] Jelaskan kenapa "K-Means menemukan 4 cluster" tidak berarti pelanggan benar-benar terbagi menjadi 4 jenis.
 - [ ] Jelaskan apa yang terjadi kalau scaling dilupakan.

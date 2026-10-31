@@ -30,6 +30,10 @@ def top_k_frequent(nums: list[int], k: int) -> list[int]:
 assert top_k_frequent([1, 1, 1, 2, 2, 3], 2) == [1, 2]
 ```
 
+## Analogi untuk orang awam
+- **Polish portfolio** → mengecat ulang dan merapikan rumah contoh sebelum dibuka untuk pengunjung.
+- **Latihan coding interview** → latihan tangga nada untuk pemain musik: membosankan, tapi membuat jarimu lancar saat tampil.
+
 ## Catatan pribadi (isi sendiri)
 - Exit criteria yang diulang:
 - Rencana Phase 4:
